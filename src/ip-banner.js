@@ -52,18 +52,33 @@
     banner.style.setProperty('z-index', opt.zIndex, 'important');
     banner.style.setProperty('font-weight', '500', 'important');
 
+    // 더 강력한 color 적용
+    banner.style.cssText += `color: ${opt.textColor} !important;`;
+    
+    // 모든 하위 요소에도 color 강제 적용
+    const styleTag = document.createElement('style');
+    styleTag.textContent = `
+      #ip-banner, #ip-banner *, #ip-banner span, #ip-banner div {
+        color: ${opt.textColor} !important;
+      }
+    `;
+    document.head.appendChild(styleTag);
+
     if (opt.iconUrl) {
       const img = document.createElement('img');
       img.src = opt.iconUrl;
-      img.style.height = '14px';
+      img.style.height = '1.2em';
       img.style.marginRight = opt.iconSpacing + 'px';
       banner.appendChild(img);
     }
 
     const descSpan = document.createElement('span');
     descSpan.textContent = opt.description;
+    descSpan.style.setProperty('color', opt.textColor, 'important');
+    
     const ipNode = document.createElement('span');
     ipNode.textContent = 'Loading…';
+    ipNode.style.setProperty('color', opt.textColor, 'important');
 
     if (opt.ipPosition === 'prefix') {
       ipNode.style.marginRight = opt.ipSpacing + 'px';
