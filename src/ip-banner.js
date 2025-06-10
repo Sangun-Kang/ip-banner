@@ -34,24 +34,6 @@
       padding: '0 1em', boxSizing: 'border-box', zIndex: opt.zIndex
     });
 
-    // !important 스타일 적용
-    banner.style.setProperty('position', 'fixed', 'important');
-    banner.style.setProperty('top', opt.top, 'important');
-    banner.style.setProperty('left', '0', 'important');
-    banner.style.setProperty('width', '100%', 'important');
-    banner.style.setProperty('height', opt.height, 'important');
-    banner.style.setProperty('line-height', opt.height, 'important');
-    banner.style.setProperty('background-color', opt.backgroundColor, 'important');
-    banner.style.setProperty('color', opt.textColor, 'important');
-    banner.style.setProperty('font-size', opt.fontSize, 'important');
-    banner.style.setProperty('display', 'flex', 'important');
-    banner.style.setProperty('align-items', 'center', 'important');
-    banner.style.setProperty('justify-content', 'center', 'important');
-    banner.style.setProperty('padding', '0 1em', 'important');
-    banner.style.setProperty('box-sizing', 'border-box', 'important');
-    banner.style.setProperty('z-index', opt.zIndex, 'important');
-    banner.style.setProperty('font-weight', '500', 'important');
-
     // 더 강력한 color 적용
     banner.style.cssText += `color: ${opt.textColor} !important;`;
     
@@ -59,7 +41,24 @@
     const styleTag = document.createElement('style');
     styleTag.textContent = `
       #ip-banner, #ip-banner *, #ip-banner span, #ip-banner div {
-        color: ${opt.textColor} !important;
+        color: ${opt.textColor} ;
+        font-weight: 500 ;
+        font-size: ${opt.fontSize} ;
+        font-family: ${opt.fontFamily} ;
+        display: flex ;
+        align-items: center ;
+        justify-content: center ;
+        padding: 0 1em ;
+        box-sizing: border-box ;
+        z-index: ${opt.zIndex} ;
+        background-color: ${opt.backgroundColor} ;
+        position: fixed ;
+        top: ${opt.top} ;
+        left: 0 ;
+        width: 100% ;
+        height: ${opt.height} ;
+        line-height: ${opt.height} ;
+        box-sizing: border-box ;
       }
     `;
     document.head.appendChild(styleTag);
