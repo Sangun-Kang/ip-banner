@@ -6,6 +6,7 @@
     iconUrl: '',
     description: 'Your public IP:',
     height: '2.5em',
+    top: '0',
     zIndex: 9999,
     ipPosition: 'suffix',
     ipSpacing: 8,
@@ -23,7 +24,7 @@
     const banner = document.createElement('div');
     banner.id = 'ip-banner';
     Object.assign(banner.style, {
-      position: 'fixed', top: 0, left: 0, width: '100%',
+      position: 'fixed', top: opt.top, left: 0, width: '100%',
       height: opt.height, lineHeight: opt.height,
       backgroundColor: opt.backgroundColor,
       color: opt.textColor,
@@ -66,3 +67,4 @@
 
   global.initIPBanner = initIPBanner;
 })(window);
+
