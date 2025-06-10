@@ -1,0 +1,17 @@
+{
+  "name": "ip-banner",
+  "version": "1.0.0",
+  "description": "브라우저 상단에 퍼블릭 IP를 표시하는 가볍고 확장 가능한 JS 라이브러리",
+  "main": "dist/ip-banner.min.js",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["ip","banner","ipify","public-ip"],
+  "author": "Your Name <you@example.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.0"
+  }
+}
