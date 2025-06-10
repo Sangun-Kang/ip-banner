@@ -10,7 +10,8 @@
     zIndex: 9999,
     ipPosition: 'suffix',
     ipSpacing: 8,
-    iconSpacing: 8
+    iconSpacing: 8,
+    fontSize: '14px',
   };
 
   function mergeOpts(defaults, opts){
@@ -33,17 +34,35 @@
       padding: '0 1em', boxSizing: 'border-box', zIndex: opt.zIndex
     });
 
+    // !important 스타일 적용
+    banner.style.setProperty('position', 'fixed', 'important');
+    banner.style.setProperty('top', opt.top, 'important');
+    banner.style.setProperty('left', '0', 'important');
+    banner.style.setProperty('width', '100%', 'important');
+    banner.style.setProperty('height', opt.height, 'important');
+    banner.style.setProperty('line-height', opt.height, 'important');
+    banner.style.setProperty('background-color', opt.backgroundColor, 'important');
+    banner.style.setProperty('color', opt.textColor, 'important');
+    banner.style.setProperty('font-size', opt.fontSize, 'important');
+    banner.style.setProperty('display', 'flex', 'important');
+    banner.style.setProperty('align-items', 'center', 'important');
+    banner.style.setProperty('justify-content', 'center', 'important');
+    banner.style.setProperty('padding', '0 1em', 'important');
+    banner.style.setProperty('box-sizing', 'border-box', 'important');
+    banner.style.setProperty('z-index', opt.zIndex, 'important');
+    banner.style.setProperty('font-weight', '500', 'important');
+
     if (opt.iconUrl) {
       const img = document.createElement('img');
       img.src = opt.iconUrl;
-      img.style.height = '1.2em';
+      img.style.height = '14px';
       img.style.marginRight = opt.iconSpacing + 'px';
       banner.appendChild(img);
     }
 
     const descSpan = document.createElement('span');
     descSpan.textContent = opt.description;
-    const ipNode = document.createElement('strong');
+    const ipNode = document.createElement('span');
     ipNode.textContent = 'Loading…';
 
     if (opt.ipPosition === 'prefix') {
@@ -67,4 +86,3 @@
 
   global.initIPBanner = initIPBanner;
 })(window);
-
