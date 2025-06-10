@@ -34,34 +34,26 @@
       padding: '0 1em', boxSizing: 'border-box', zIndex: opt.zIndex
     });
 
-    // 더 강력한 color 적용
-    banner.style.cssText += `color: ${opt.textColor} !important;`;
-    
-    // 모든 하위 요소에도 color 강제 적용
-    const styleTag = document.createElement('style');
-    styleTag.textContent = `
-      #ip-banner, #ip-banner *, #ip-banner span, #ip-banner div {
-        color: ${opt.textColor} ;
-        font-weight: 500 ;
-        font-size: ${opt.fontSize} ;
-        font-family: ${opt.fontFamily} ;
-        display: flex ;
-        align-items: center ;
-        justify-content: center ;
-        padding: 0 1em ;
-        box-sizing: border-box ;
-        z-index: ${opt.zIndex} ;
-        background-color: ${opt.backgroundColor} ;
-        position: fixed ;
-        top: ${opt.top} ;
-        left: 0 ;
-        width: 100% ;
-        height: ${opt.height} ;
-        line-height: ${opt.height} ;
-        box-sizing: border-box ;
-      }
+    // cssText로 !important 스타일 적용
+    banner.style.cssText += `
+      position: fixed !important;
+      top: ${opt.top} !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: ${opt.height} !important;
+      line-height: ${opt.height} !important;
+      background-color: ${opt.backgroundColor} !important;
+      color: ${opt.textColor} !important;
+      font-family: ${opt.fontFamily} !important;
+      font-weight: 500 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0 1em !important;
+      box-sizing: border-box !important;
+      z-index: ${opt.zIndex} !important;
+      font-size: ${opt.fontSize} !important;
     `;
-    document.head.appendChild(styleTag);
 
     if (opt.iconUrl) {
       const img = document.createElement('img');
