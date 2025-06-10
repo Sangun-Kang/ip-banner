@@ -2,14 +2,28 @@
   "name": "ip-banner",
   "version": "1.0.0",
   "description": "A lightweight and extensible JavaScript library for displaying the public IP address in a fixed banner at the top of the browser",
+  "keywords": [
+    "ip",
+    "banner",
+    "ipify",
+    "public-ip"
+  ],
+  "homepage": "https://github.com/Sangun-Kang/ip-banner#readme",
+  "bugs": {
+    "url": "https://github.com/Sangun-Kang/ip-banner/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sangun-Kang/ip-banner.git"
+  },
+  "license": "MIT",
+  "author": "Sangun Kang <sangun.kang@gmail.com>",
+  "type": "commonjs",
   "main": "dist/ip-banner.min.js",
   "scripts": {
     "build": "esbuild src/ip-banner.js --bundle --minify --outfile=dist/ip-banner.min.js",
     "prepublishOnly": "npm run build"
   },
-  "keywords": ["ip","banner","ipify","public-ip"],
-  "author": "Sangun Kang <sangun.kang@gmail.com>",
-  "license": "MIT",
   "devDependencies": {
     "esbuild": "^0.17.0"
   }
