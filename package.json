@@ -1,6 +1,6 @@
 {
   "name": "ip-banner",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "A lightweight and extensible JavaScript library for displaying the public IP address in a fixed banner at the top of the browser",
   "keywords": [
     "ip",
