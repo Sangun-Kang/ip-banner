@@ -43,4 +43,4 @@ npm install ip-banner
 
 ## License
 
-MIT © Your Name
+MIT © Sangun Kang
