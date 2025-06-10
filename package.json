@@ -4,14 +4,13 @@
   "description": "A lightweight and extensible JavaScript library for displaying the public IP address in a fixed banner at the top of the browser",
   "main": "dist/ip-banner.min.js",
   "scripts": {
-    "build": "rollup -c",
+    "build": "esbuild src/ip-banner.js --bundle --minify --outfile=dist/ip-banner.min.js",
     "prepublishOnly": "npm run build"
   },
   "keywords": ["ip","banner","ipify","public-ip"],
-  "author": "sangun950@gmail.com",
+  "author": "Sangun Kang <sangun.kang@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "rollup": "^3.0.0",
-    "rollup-plugin-terser": "^7.0.0"
+    "esbuild": "^0.17.0"
   }
 }
