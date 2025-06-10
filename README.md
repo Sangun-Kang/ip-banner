@@ -1,6 +1,6 @@
 # ip-banner
 
-A lightweight and extensible JavaScript library for displaying the public IP address in a fixed banner at the top of the browser.
+This is a simple JavaScript library that fetches the client’s IP address using the ipify API and displays it in a fixed header at the top of the page.
 
 ## Installation
 
