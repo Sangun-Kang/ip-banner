@@ -2,7 +2,6 @@
   const DEFAULTS = {
     backgroundColor: '#003366',
     textColor: '#ffffff',
-    fontFamily: 'sans-serif',
     iconUrl: '',
     description: 'Your public IP:',
     height: '2.5em',
